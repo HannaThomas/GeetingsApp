@@ -27,13 +27,11 @@ function App() {
   }
   return (
     <div className={darkMode ? "dark" : "light"}>
-      <h1>{getGreeting()},  {name}!, {getRandomCompliments()}</h1>
-      <input placeholder='Name' value={name} onChange={(e)=>setName(e.target.value)}/>
-      <input placeholder='Email' value={email} onChange={(e)=>setEmail(e.target.value)}/>
+      <h1>{getGreeting()}  {name}! {getRandomCompliments()}</h1>
+      Name: <input placeholder='Name' value={name} onChange={(e)=>setName(e.target.value)}/><br/>
+      Email: <input placeholder='Email' value={email} onChange={(e)=>setEmail(e.target.value)}/><br/>
       <button onClick={handleClick}>Create Profile</button>
-      <div>
-        <button onClick={()=>{setDarkMode((prev)=>!prev)}}>Toggle Theme</button>
-      </div>
+      <button onClick={()=>{setDarkMode((prev)=>!prev)}}>Toggle Theme</button>
       {show && (
         <div>
           <h2>Profile</h2>
